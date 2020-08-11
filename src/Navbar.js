@@ -15,7 +15,7 @@ export default class Navbar extends Component {
       <div className="navBar">
         <div className="logo">
           <img
-            src="./img/logo_white.jpg"
+            src={require("./img/logo_white.jpg")}
             className="logo-white"
             alt="elan logo"
           ></img>
@@ -31,7 +31,7 @@ export default class Navbar extends Component {
             rel="noopener noreferrer"
           >
             <img
-              src="./img/sm-fb.png"
+              src={require("./img/sm-fb.png")}
               alt="facebook logo"
               className="sm-icon"
             ></img>
@@ -42,7 +42,7 @@ export default class Navbar extends Component {
             rel="noopener noreferrer"
           >
             <img
-              src="./img/sm-insta.png"
+              src={require("./img/sm-insta.png")}
               alt="Instagram logo"
               className="sm-icon"
             ></img>
@@ -53,7 +53,7 @@ export default class Navbar extends Component {
             rel="noopener noreferrer"
           >
             <img
-              src="./img/sm-li.png"
+              src={require("./img/sm-li.png")}
               alt="linkedin logo"
               className="sm-icon"
             ></img>
@@ -64,7 +64,7 @@ export default class Navbar extends Component {
             rel="noopener noreferrer"
           >
             <img
-              src="./img/sm-cm.png"
+              src={require("./img/sm-cm.png")}
               alt="campaign monitor logo"
               className="sm-icon"
             ></img>
@@ -75,7 +75,7 @@ export default class Navbar extends Component {
             rel="noopener noreferrer"
           >
             <img
-              src="./img/sm-cb.png"
+              src={require("./img/sm-cb.png")}
               alt="contact builder logo"
               className="sm-icon"
             ></img>
@@ -86,7 +86,7 @@ export default class Navbar extends Component {
             rel="noopener noreferrer"
           >
             <img
-              src="./img/sm-image.png"
+              src={require("./img/sm-image.png")}
               alt="elanimage library logo"
               className="sm-icon"
             ></img>
