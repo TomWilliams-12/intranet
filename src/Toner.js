@@ -4,7 +4,7 @@ const Toner = () => {
   return (
     <div className="toner-request">
       <h2 className="mreadings">Printer Toner Request</h2>
-      <form className="meters">
+      <form className="toners">
         <label for="siteName">Site Name:</label>
         <input
           type="text"
