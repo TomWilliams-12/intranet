@@ -1,19 +1,6 @@
 import React, { useState, Fragment } from "react";
 
-const Buttons = () => {
-  const [northbtn, setNorthbtn] = useState(true);
-  const [midlandsbtn, setMidlandsbtn] = useState(false);
-
-  const Toggle = () => {
-    if (northbtn && !midlandsbtn) {
-      setNorthbtn(false);
-      setMidlandsbtn(true);
-    } else if (!northbtn && midlandsbtn) {
-      setNorthbtn(true);
-      setMidlandsbtn(false);
-    }
-  };
-
+const Buttons = ({ toggle, northbtn, midlandsbtn }) => {
   return (
     <div className="regional-buttons">
       <button
@@ -21,7 +8,7 @@ const Buttons = () => {
         className={northbtn ? "activebtn" : ""}
         onClick={(e) => {
           e.preventDefault();
-          Toggle();
+          toggle();
         }}
       >
         Northern
@@ -31,7 +18,7 @@ const Buttons = () => {
         className={midlandsbtn ? "activebtn" : ""}
         onClick={(e) => {
           e.preventDefault();
-          Toggle();
+          toggle();
         }}
       >
         Midlands

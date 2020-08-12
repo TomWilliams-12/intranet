@@ -1,24 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { render } from "react-dom";
 import Buttons from "./Buttons";
 import Sites from "./Sites";
 import MeterRead from "./MeterRead";
 import Toner from "./Toner";
 
-const Body = () => {
+const Body = ({}) => {
+  const [northbtn, setNorthbtn] = useState(true);
+  const [midlandsbtn, setMidlandsbtn] = useState(false);
+
+  const Toggle = () => {
+    if (northbtn && !midlandsbtn) {
+      setNorthbtn(false);
+      setMidlandsbtn(true);
+    } else if (!northbtn && midlandsbtn) {
+      setNorthbtn(true);
+      setMidlandsbtn(false);
+    }
+  };
+
   return (
     <div className="main-content">
       <div className="site-info">
-        <Buttons />
-        <Sites />
+        <Buttons
+          toggle={Toggle}
+          northbtn={northbtn}
+          midlandsbtn={midlandsbtn}
+        />
+        <Sites northbtn={northbtn} midlandsbtn={midlandsbtn} />
       </div>
       <div className="forms">
-        <div className="meter-readings">
-          <MeterRead />
-        </div>
-        <div className="toner-request">
-          <Toner />
-        </div>
+        <MeterRead />
+        <Toner />
       </div>
     </div>
   );
