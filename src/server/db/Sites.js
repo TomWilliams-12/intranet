@@ -1,6 +1,6 @@
-import { connection, Connection } from "./index";
+import { Connection } from "./index.js";
 
-export const all = async () => {
+export const Sites = async () => {
   return new Promise((resolve, reject) => {
     Connection.query("SELECT * from sites", (err, results) => {
       if (err) {
@@ -11,6 +11,4 @@ export const all = async () => {
   });
 };
 
-export default {
-  all,
-};
+export default Sites;

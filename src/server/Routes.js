@@ -1,12 +1,12 @@
-import * as express from "express";
-import DB from "./db";
+import express from "express";
+import Sites from "./db/Sites.js";
 
 const router = express.Router();
 
 const Router = () => {
   router.get("/api/sites", async (req, res) => {
     try {
-      let sites = await DB.Sites.all();
+      let sites = await Sites.all();
       res.json(sites);
     } catch (e) {
       console.log(e);
